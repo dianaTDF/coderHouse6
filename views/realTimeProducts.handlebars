@@ -1,0 +1,57 @@
+<h2>Lista de productos</h2>
+
+
+<form id="newProd">
+
+    <label for="title">
+        titulo:
+        <input required type="text" name="title" id="">
+    </label><br>
+
+    <label for="description">
+        descripcion:
+        <textarea name="description" id="" cols="50" rows="3"></textarea>
+    </label><br>
+
+    <label for="">
+        codigo:
+        <input required type="text" name="code" id="">
+    </label><br>
+
+    <label for="">
+        precio:
+        <input required min="0" type="number" name="price" id="">
+    </label><br>
+
+    <label for="">
+        estado:
+        <select name="status" id="">
+            <option value="1">activo</option>
+            <option value="0">inactivo</option>
+        </select>            
+    </label><br>
+
+    <label for="">
+        inventario:
+        <input required min="0"  type="number" name="stock" id="">
+    </label><br>
+
+    <label for="">
+        categoria
+        <input required type="text" name="category" id="">
+    </label><br>
+
+    <label for="">
+        imagen:
+        {{!--         <input type='file' name='thumbnails' id='' /> --}}
+    </label><br>
+
+    <input required type="submit" value="Agregar">
+</form>
+
+
+
+<div id="products_list"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/statics/js/products.client.js"></script>
